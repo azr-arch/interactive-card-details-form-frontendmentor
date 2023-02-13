@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+
+.card{
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url('./images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    position: relative;
+}
+.card-front,
+.card-back{
+    position:absolute;
+    width: 350px;
+    top: 0;
+    left: 0;
+}
+
+.card-front{
+    top: 80px;
+    left: 40px;
+}
+
+.logo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.card-back{
+    top: 290px;
+    left: 70px;
+}
+
+.front,
+.back{
+    width: 100%;
+}
+
+.forward-slash,
+.card-number,
+.cardholder-name,
+.card-exp-mm,
+.card-exp-yy,
+.cvc{
+    position: absolute;
+    color: white;
+}
+.cardholder-name,
+.cvc{
+    letter-spacing: 1px;
+}
+
+.card-number{
+    width: 80%;
+    height: 20px;   
+    left: 1em;
+    top: 60%;
+    letter-spacing: .2em;
+}
+
+.cardholder-name{
+    width: 30%;
+    height: 10px;
+    left: 1em;
+    top: 85%;
+    font-size: 14px;
+}
+
+.card-exp-mm,
+.card-exp-yy{
+    width: 5%;
+    height: 10px;
+    left: 80%;
+    top: 85%;
+    font-size: 14px;
+}
+
+.forward-slash{
+    top:85%;
+    width: 1.5px;
+    height: 15px;
+    transform: rotate(10deg);
+    left: 86%;
+    background-color: white;
+}
+.card-exp-yy{
+    left: 87.5%;
+}
+.cvc{
+    left: 79%;
+    top: 44%;
+    width: 15%;
+    height: 1em;
+    font-size: 14px;
+}
+
+form{
+    background-color: hsl(0, 0%, 100%);
+}
+.layover{
+    position: absolute;
+
+    width: 70%;
+    height: 100%;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+}
+.layover > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: 2;
+    width: 400px;
+    height: 400px;
+}
+.layover > div > h3{
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.layover > div > p{
+    margin-top: 0;
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.layover > div > button{
+    width: 70%;
+}
+
+.card-details{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.group{
+    display: flex;
+    flex-direction: column;
+}
+
+.date-info{
+    display: flex;
+    gap: 1em;
+}
+
+.card-date{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-date > div{
+    display: flex;
+    gap:.5em;
+}   
+
+.card-cvc{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field{
+    height: 30px;
+    margin-top: .3rem;
+
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid hsl(270, 3%, 87%);
+    padding-inline:10px;
+}
+
+.labels{
+    font-size: 10px;
+    word-spacing: 4px;
+    float: right;
+
+}
+
+.submit-box{
+    width: 50%;
+}
+
+.submit-btn{
+    width: 100%;
+    padding: 8px;
+    background: hsl(278, 68%, 11%);
+    color: white;
+    letter-spacing: .8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+input:focus{
+    outline: 2px solid hsl(249, 99%, 64%);
+}
+
+.errorfield:focus{
+    outline: 2px solid red;
+}
+
+.error{
+    margin-top: 3px;
+    margin-bottom: 2rem;
+    font-size: 10px;
+    color: red;
+}
+input::placeholder{
+    opacity: .5;
+}
